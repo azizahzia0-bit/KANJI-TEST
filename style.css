@@ -1,0 +1,1776 @@
+css
+/* =========================================
+   BASIC
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    background: #f7f4ec;
+    color: #302b28;
+    line-height: 1.7;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(247, 244, 236, 0.92);
+    border-bottom: 1px solid #e6dfd2;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #493c35;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu a {
+    font-size: 0.9rem;
+    color: #655a53;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: #53677a;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 90px 9% 80px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(109, 130, 148, 0.14),
+            transparent 35%
+        ),
+        #f7f4ec;
+}
+
+.hero-text {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-jp {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.1rem;
+    color: #61778b;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(4rem, 9vw, 7.5rem);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+
+    color: #332b27;
+}
+
+.hero-subtitle {
+    margin-top: 8px;
+
+    font-size: 0.95rem;
+    letter-spacing: 0.3em;
+
+    color: #85786e;
+}
+
+.hero-description {
+    margin-top: 28px;
+
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.25rem;
+
+    color: #4b423d;
+}
+
+.hero-description-id {
+    max-width: 520px;
+
+    margin-top: 6px;
+
+    font-size: 0.95rem;
+    color: #756b64;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 32px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 0 25px;
+
+    border-radius: 10px;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: #52697c;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #44596b;
+}
+
+.btn-secondary {
+    border: 1px solid #c9c0b5;
+    color: #554b45;
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.btn-secondary:hover {
+    border-color: #52697c;
+}
+
+
+/* =========================================
+   DECORATIVE KANJI
+========================================= */
+
+.hero-kanji {
+    width: 390px;
+    height: 390px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(82, 105, 124, 0.13),
+            rgba(82, 105, 124, 0.03) 65%,
+            transparent 66%
+        );
+}
+
+.kanji {
+    position: absolute;
+
+    font-family: "Noto Serif JP", serif;
+
+    color: #596f82;
+
+    user-select: none;
+}
+
+.kanji-1 {
+    font-size: 7rem;
+    transform: translate(-75px, -65px);
+}
+
+.kanji-2 {
+    font-size: 6rem;
+    transform: translate(80px, 40px);
+}
+
+.kanji-3 {
+    font-size: 4rem;
+    transform: translate(5px, 105px);
+
+    color: #9a897c;
+}
+
+
+/* =========================================
+   WELCOME CARD
+========================================= */
+
+.welcome-section {
+    padding: 30px 9% 80px;
+}
+
+.welcome-card {
+    max-width: 1050px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    padding: 26px 30px;
+
+    border: 1px solid #e3dbcf;
+    border-radius: 16px;
+
+    background: #fffdf8;
+
+    box-shadow: 0 8px 30px rgba(65, 52, 43, 0.05);
+}
+
+.welcome-icon {
+    width: 62px;
+    height: 62px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #e9eef1;
+
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.8rem;
+
+    color: #52697c;
+}
+
+.welcome-card h2 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.25rem;
+
+    color: #433a35;
+}
+
+.welcome-card p {
+    margin-top: 4px;
+
+    font-size: 0.9rem;
+    color: #746b64;
+}
+
+
+/* =========================================
+   MESSAGE FOR FRIENDS
+========================================= */
+
+.message-section {
+    padding: 0 9% 80px;
+}
+
+.message-card {
+    max-width: 1050px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    padding: 30px 34px;
+
+    border: 1px solid #e3dbcf;
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf8,
+            #f1f3f3
+        );
+
+    box-shadow: 0 8px 30px rgba(65, 52, 43, 0.05);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.message-card::after {
+    content: "頑張ろう";
+    
+    position: absolute;
+    right: 28px;
+    bottom: -15px;
+
+    font-family: "Noto Serif JP", serif;
+    font-size: 4rem;
+
+    color: rgba(82, 105, 124, 0.06);
+
+    pointer-events: none;
+}
+
+.message-icon {
+    width: 64px;
+    height: 64px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #f0e8dc;
+
+    font-size: 1.7rem;
+}
+
+.message-content {
+    position: relative;
+    z-index: 1;
+}
+
+.message-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+
+    color: #718394;
+}
+
+.message-content h2 {
+    margin-top: 3px;
+
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+
+    color: #3d342f;
+}
+
+.message-content p {
+    margin-top: 7px;
+
+    font-size: 0.88rem;
+
+    color: #746b64;
+}
+
+.message-content .message-end {
+    margin-top: 12px;
+
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+
+    color: #52697c;
+}
+
+
+/* =========================================
+   MESSAGE - DARK MODE
+========================================= */
+
+@media (prefers-color-scheme: dark) {
+
+    .message-card {
+        background:
+            linear-gradient(
+                135deg,
+                #252321,
+                #292e31
+            );
+
+        border-color: #3c3835;
+
+        box-shadow: none;
+    }
+
+    .message-icon {
+        background: #35312d;
+    }
+
+    .message-label {
+        color: #9cb0c0;
+    }
+
+    .message-content h2 {
+        color: #eee8e1;
+    }
+
+    .message-content p {
+        color: #aaa19a;
+    }
+
+    .message-content .message-end {
+        color: #a9bfd0;
+    }
+
+    .message-card::after {
+        color: rgba(169, 191, 208, 0.05);
+    }
+}
+
+
+/* =========================================
+   MESSAGE - MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .message-section {
+        padding:
+            0 5% 65px;
+    }
+
+    .message-card {
+        align-items: flex-start;
+
+        gap: 16px;
+
+        padding: 22px;
+
+        border-radius: 17px;
+    }
+
+    .message-icon {
+        width: 50px;
+        height: 50px;
+
+        border-radius: 13px;
+
+        font-size: 1.4rem;
+    }
+
+    .message-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .message-content p {
+        font-size: 0.82rem;
+    }
+
+    .message-card::after {
+        font-size: 2.8rem;
+        right: 15px;
+        bottom: -8px;
+    }
+}
+
+
+/* =========================================
+   MENU SECTION
+========================================= */
+
+.menu-section {
+    padding: 20px 9% 100px;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 42px;
+
+    text-align: center;
+}
+
+.section-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+
+    color: #718394;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+
+    font-family: "Noto Serif JP", serif;
+    font-size: 2.3rem;
+    font-weight: 500;
+
+    color: #3d342f;
+}
+
+.section-heading p {
+    margin-top: 5px;
+
+    color: #7b716a;
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   MENU GRID
+========================================= */
+
+.menu-grid {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+
+/* =========================================
+   MENU CARD
+========================================= */
+
+.menu-card {
+    min-height: 150px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 22px;
+
+    position: relative;
+
+    border: 1px solid #e3dbcf;
+    border-radius: 16px;
+
+    background: #fffdf8;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #b7c3cc;
+
+    box-shadow:
+        0 14px 35px rgba(60, 49, 42, 0.08);
+}
+
+.map-card {
+    grid-column: 1 / -1;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf8,
+            #f0f3f4
+        );
+}
+
+.card-icon {
+    width: 68px;
+    height: 68px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #edf0f1;
+
+    font-family: "Noto Serif JP", serif;
+    font-size: 2rem;
+
+    color: #566d80;
+}
+
+.map-card .card-icon {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.7rem;
+}
+
+.card-content {
+    padding-right: 30px;
+}
+
+.card-number {
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    color: #8b7c70;
+}
+
+.card-content h3 {
+    margin-top: 2px;
+
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    color: #3d342f;
+}
+
+.card-content p {
+    margin-top: 2px;
+
+    font-size: 0.82rem;
+    color: #81766e;
+}
+
+.arrow {
+    position: absolute;
+    right: 22px;
+
+    font-size: 1.3rem;
+
+    color: #8b7f76;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+.menu-card:hover .arrow {
+    transform: translateX(4px);
+    color: #52697c;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid #e3dbcf;
+
+    color: #82776f;
+
+    background: #f1ede4;
+}
+
+.footer p {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1rem;
+}
+
+.footer span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================
+   DARK MODE
+   Mengikuti pengaturan perangkat
+========================================= */
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: #1d1c1b;
+        color: #eee9e2;
+    }
+
+    .navbar {
+        background: rgba(29, 28, 27, 0.94);
+        border-bottom-color: #363331;
+    }
+
+    .logo {
+        color: #eee9e2;
+    }
+
+    .nav-menu a {
+        color: #bdb5ad;
+    }
+
+    .nav-menu a:hover {
+        color: #a9bfd0;
+    }
+
+    .hero {
+        background:
+            radial-gradient(
+                circle at 80% 30%,
+                rgba(100, 127, 150, 0.15),
+                transparent 35%
+            ),
+            #1d1c1b;
+    }
+
+    .welcome-jp {
+        color: #9db2c4;
+    }
+
+    .hero h1 {
+        color: #f2eee8;
+    }
+
+    .hero-subtitle {
+        color: #aaa098;
+    }
+
+    .hero-description {
+        color: #d3cbc3;
+    }
+
+    .hero-description-id {
+        color: #a9a19a;
+    }
+
+    .btn-secondary {
+        background: #272523;
+        border-color: #514b46;
+        color: #ddd6cf;
+    }
+
+    .btn-secondary:hover {
+        border-color: #91a9bc;
+    }
+
+    .welcome-card,
+    .menu-card {
+        background: #252321;
+        border-color: #3c3835;
+        box-shadow: none;
+    }
+
+    .welcome-card h2,
+    .card-content h3 {
+        color: #eee8e1;
+    }
+
+    .welcome-card p,
+    .card-content p,
+    .section-heading p {
+        color: #aaa19a;
+    }
+
+    .welcome-icon,
+    .card-icon {
+        background: #30383e;
+        color: #a9bfd0;
+    }
+
+    .map-card {
+        background:
+            linear-gradient(
+                135deg,
+                #252321,
+                #292e31
+            );
+    }
+
+    .section-label {
+        color: #9cb0c0;
+    }
+
+    .section-heading h2 {
+        color: #eee8e1;
+    }
+
+    .card-number {
+        color: #a89b8f;
+    }
+
+    .arrow {
+        color: #aaa099;
+    }
+
+    .menu-card:hover {
+        border-color: #667887;
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .footer {
+        background: #171615;
+        border-top-color: #363331;
+        color: #9d958e;
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .hero-kanji {
+        width: 280px;
+        height: 280px;
+    }
+
+    .kanji-1 {
+        font-size: 5.5rem;
+    }
+
+    .kanji-2 {
+        font-size: 4.8rem;
+    }
+
+    .kanji-3 {
+        font-size: 3.2rem;
+    }
+
+    .menu-section,
+    .welcome-section {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 64px;
+        padding: 0 5%;
+    }
+
+    .nav-menu {
+        gap: 14px;
+    }
+
+    .nav-menu a {
+        font-size: 0.75rem;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding:
+            65px 7% 70px;
+
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.3rem, 15vw, 5rem);
+    }
+
+    .hero-description {
+        font-size: 1.05rem;
+    }
+
+    .hero-description-id {
+        font-size: 0.85rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-kanji {
+        width: 230px;
+        height: 230px;
+
+        margin-top: 45px;
+    }
+
+    .kanji-1 {
+        font-size: 4.5rem;
+        transform: translate(-45px, -40px);
+    }
+
+    .kanji-2 {
+        font-size: 4rem;
+        transform: translate(45px, 35px);
+    }
+
+    .kanji-3 {
+        font-size: 2.7rem;
+        transform: translate(0, 70px);
+    }
+
+    .welcome-section {
+        padding:
+            10px 5% 65px;
+    }
+
+    .welcome-card {
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .welcome-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 1.5rem;
+    }
+
+    .menu-section {
+        padding:
+            10px 5% 70px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.9rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-card {
+        grid-column: auto;
+    }
+
+    .menu-card {
+        min-height: 125px;
+        padding: 18px;
+    }
+
+    .card-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.7rem;
+    }
+
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-content p {
+        font-size: 0.76rem;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL SCREEN
+========================================= */
+
+@media (max-width: 400px) {
+
+    .nav-menu a:first-child {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 50px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+/* =========================================
+   KANJI MAP
+========================================= */
+
+.map-page {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 70px 0 90px;
+}
+
+/* Hero */
+
+.map-hero {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.map-label {
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    font-weight: 700;
+    color: #52697c;
+    margin-bottom: 12px;
+}
+
+.map-hero h1 {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    margin: 0;
+}
+
+.map-subtitle {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #52697c;
+}
+
+.map-description {
+    margin-top: 20px;
+    line-height: 1.9;
+    color: #6f6964;
+}
+
+
+/* Week Box */
+
+.kanji-week {
+    background: #fffdf8;
+    border: 1px solid #e3dbcf;
+    border-radius: 24px;
+    padding: 30px;
+    margin-bottom: 28px;
+
+    box-shadow: 0 8px 25px rgba(60, 45, 30, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.kanji-week:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(60, 45, 30, 0.10);
+}
+
+
+/* Week Header */
+
+.week-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.week-number {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #52697c;
+    color: white;
+
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.week-label {
+    margin: 0 0 2px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+
+    color: #8a8179;
+}
+
+.week-header h2 {
+    margin: 0;
+
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.5rem;
+}
+
+
+/* Kanji List */
+
+.kanji-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    padding: 20px;
+
+    background: #f7f4ec;
+    border-radius: 18px;
+}
+
+.kanji-list span {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fffdf8;
+    border: 1px solid #e3dbcf;
+    border-radius: 12px;
+
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.35rem;
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+.kanji-list span:hover {
+    transform: translateY(-3px);
+    background: #f0e8dc;
+}
+
+
+/* Test Button */
+
+.week-button {
+    display: inline-flex;
+    align-items: center;
+
+    margin-top: 22px;
+    padding: 11px 18px;
+
+    border-radius: 12px;
+
+    background: #302b28;
+    color: #ffffff;
+
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.week-button:hover {
+    transform: translateX(3px);
+    opacity: 0.85;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+@media (prefers-color-scheme: dark) {
+
+    .map-label {
+        color: #a9bfd0;
+    }
+
+    .map-subtitle {
+        color: #a9bfd0;
+    }
+
+    .map-description {
+        color: #b8b0a9;
+    }
+
+    .kanji-week {
+        background: #252321;
+        border-color: #3a3632;
+
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+    }
+
+    .week-number {
+        background: #607b90;
+    }
+
+    .week-label {
+        color: #99918b;
+    }
+
+    .kanji-list {
+        background: #1d1c1b;
+    }
+
+    .kanji-list span {
+        background: #292725;
+        border-color: #403b37;
+        color: #f4eee7;
+    }
+
+    .kanji-list span:hover {
+        background: #35312d;
+    }
+
+    .week-button {
+        background: #eee8df;
+        color: #282522;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .map-page {
+        width: 90%;
+        padding: 45px 0 65px;
+    }
+
+    .map-hero {
+        margin-bottom: 35px;
+    }
+
+    .kanji-week {
+        padding: 20px;
+        border-radius: 19px;
+    }
+
+    .week-header {
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .week-number {
+        width: 45px;
+        height: 45px;
+        border-radius: 13px;
+        font-size: 0.9rem;
+    }
+
+    .week-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .kanji-list {
+        padding: 14px;
+        gap: 7px;
+    }
+
+    .kanji-list span {
+        width: 42px;
+        height: 42px;
+
+        border-radius: 10px;
+        font-size: 1.15rem;
+    }
+
+    .week-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+/* =========================================
+   QUIZ PAGE
+========================================= */
+
+.quiz-page {
+    width: min(900px, 92%);
+    margin: 0 auto;
+    padding: 60px 0 90px;
+}
+
+
+/* HERO */
+
+.quiz-hero {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.quiz-label {
+    color: #52697c;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+}
+
+.quiz-hero h1 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 3rem;
+    margin: 10px 0 0;
+}
+
+.quiz-subtitle {
+    color: #6f6964;
+    margin: 5px 0;
+}
+
+
+/* QUIZ SELECTOR */
+
+.quiz-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.quiz-select {
+    border: 1px solid #e3dbcf;
+    background: #fffdf8;
+    border-radius: 16px;
+    padding: 15px;
+
+    cursor: pointer;
+
+    font-family: "Noto Sans JP", sans-serif;
+
+    transition: 0.2s ease;
+}
+
+.quiz-select span {
+    display: block;
+    font-weight: 700;
+}
+
+.quiz-select small {
+    display: block;
+    margin-top: 4px;
+    color: #8a8179;
+}
+
+.quiz-select:hover {
+    transform: translateY(-2px);
+}
+
+.quiz-select.active {
+    background: #52697c;
+    color: white;
+    border-color: #52697c;
+}
+
+.quiz-select.active small {
+    color: #e8eef2;
+}
+
+
+/* QUIZ CARD */
+
+.quiz-card,
+.result-card {
+    background: #fffdf8;
+    border: 1px solid #e3dbcf;
+    border-radius: 25px;
+
+    padding: 35px;
+
+    box-shadow: 0 10px 30px rgba(60, 45, 30, 0.07);
+}
+
+
+/* TOP */
+
+.quiz-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 700;
+    color: #52697c;
+}
+
+
+/* PROGRESS */
+
+.progress-container {
+    width: 100%;
+    height: 7px;
+
+    background: #eee8df;
+
+    border-radius: 20px;
+
+    margin: 18px 0 35px;
+
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0;
+
+    background: #52697c;
+
+    transition: width 0.3s ease;
+}
+
+
+/* QUESTION */
+
+.question-area {
+    text-align: center;
+}
+
+.question-type {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: #f0e8dc;
+    color: #6d6258;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.question-area h2 {
+    font-family: "Noto Serif JP", serif;
+
+    font-size: clamp(1.4rem, 4vw, 2rem);
+
+    line-height: 1.7;
+
+    margin: 25px 0 30px;
+}
+
+
+/* ANSWERS */
+
+.answer-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.answer-choice {
+    min-height: 60px;
+
+    padding: 12px 15px;
+
+    border-radius: 14px;
+
+    border: 1px solid #ddd4c8;
+
+    background: #fff;
+
+    font-family: "Noto Sans JP", sans-serif;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.answer-choice:hover:not(:disabled) {
+    transform: translateY(-2px);
+    border-color: #52697c;
+}
+
+.answer-choice.correct {
+    background: #e3eee7;
+    border-color: #6f9b7e;
+    color: #315c3e;
+}
+
+.answer-choice.wrong {
+    background: #f4e2df;
+    border-color: #b87970;
+    color: #743e37;
+}
+
+
+/* NEXT BUTTON */
+
+.next-button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: #302b28;
+    color: white;
+
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.next-button:hover:not(:disabled) {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.next-button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   RESULT
+========================================= */
+
+.result-card {
+    text-align: center;
+}
+
+.result-label {
+    color: #52697c;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.result-card h2 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 2rem;
+}
+
+.score-circle {
+    width: 140px;
+    height: 140px;
+
+    margin: 25px auto;
+
+    border-radius: 50%;
+
+    background: #f0e8dc;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scoreText {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #52697c;
+}
+
+#resultMessage {
+    color: #6f6964;
+}
+
+.result-detail {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    margin: 20px 0;
+
+    font-weight: 600;
+}
+
+.result-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.retry-button,
+.map-button {
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.retry-button {
+    border: none;
+    background: #52697c;
+    color: white;
+}
+
+.map-button {
+    background: #f0e8dc;
+    color: #302b28;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+@media (prefers-color-scheme: dark) {
+
+    .quiz-label {
+        color: #a9bfd0;
+    }
+
+    .quiz-subtitle {
+        color: #aaa39d;
+    }
+
+    .quiz-select,
+    .quiz-card,
+    .result-card {
+        background: #252321;
+        border-color: #3a3632;
+    }
+
+    .quiz-select small {
+        color: #99918b;
+    }
+
+    .quiz-select.active {
+        background: #607b90;
+        border-color: #607b90;
+    }
+
+    .progress-container {
+        background: #3a3632;
+    }
+
+    .question-type {
+        background: #35312d;
+        color: #c7bfb7;
+    }
+
+    .answer-choice {
+        background: #292725;
+        border-color: #403b37;
+        color: #f4eee7;
+    }
+
+    .answer-choice.correct {
+        background: #294132;
+        color: #b8d9c1;
+    }
+
+    .answer-choice.wrong {
+        background: #492d29;
+        color: #e2b5ae;
+    }
+
+    .next-button {
+        background: #eee8df;
+        color: #282522;
+    }
+
+    .score-circle {
+        background: #35312d;
+    }
+
+    .map-button {
+        background: #35312d;
+        color: #eee8df;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .quiz-page {
+        width: 90%;
+        padding: 45px 0 65px;
+    }
+
+    .quiz-hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .quiz-selector {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-card,
+    .result-card {
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .answer-area {
+        grid-template-columns: 1fr;
+    }
+
+    .result-buttons {
+        flex-direction: column;
+    }
+
+    .retry-button,
+    .map-button {
+        width: 100%;
+        text-align: center;
+    }
+}

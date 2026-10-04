@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>第4週 | 漢字テスト</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+
+        <a href="index.html" class="logo">
+            漢字テスト
+        </a>
+
+        <nav class="nav-menu">
+            <a href="index.html">ホーム</a>
+            <a href="maps.html">漢字マップ</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main class="quiz-page">
+
+    <section class="quiz-hero">
+
+        <p class="quiz-label">
+            KANJI TEST
+        </p>
+
+        <h1>
+            第4週
+        </h1>
+
+        <p class="quiz-subtitle">
+            Pertemuan 4
+        </p>
+
+        <p>
+            15 Kanji・4 Quiz
+        </p>
+
+    </section>
+
+
+    <!-- QUIZ SELECTOR -->
+
+    <section class="quiz-selector">
+
+        <button
+            class="quiz-select active"
+            onclick="startQuiz(1)"
+        >
+            <span>Quiz 1</span>
+            <small>Basic Recall</small>
+        </button>
+
+        <button
+            class="quiz-select"
+            onclick="startQuiz(2)"
+        >
+            <span>Quiz 2</span>
+            <small>Reverse Recall</small>
+        </button>
+
+        <button
+            class="quiz-select"
+            onclick="startQuiz(3)"
+        >
+            <span>Quiz 3</span>
+            <small>Jukugo Evaluation</small>
+        </button>
+
+        <button
+            class="quiz-select"
+            onclick="startQuiz(4)"
+        >
+            <span>Quiz 4</span>
+            <small>HOTS / Context</small>
+        </button>
+
+    </section>
+
+
+    <!-- JUKUGO SESSION SELECTOR -->
+
+    <section
+        class="quiz-selector"
+        id="jukugoSessionSelector"
+        style="display: none;"
+    >
+
+        <button
+            class="quiz-select active"
+            id="sessionButton1"
+            onclick="selectJukugoSession(1)"
+        >
+            <span>Sesi 1</span>
+            <small>10 Jukugo</small>
+        </button>
+
+        <button
+            class="quiz-select"
+            id="sessionButton2"
+            onclick="selectJukugoSession(2)"
+        >
+            <span>Sesi 2</span>
+            <small>10 Jukugo</small>
+        </button>
+
+        <button
+            class="quiz-select"
+            id="sessionButton3"
+            onclick="selectJukugoSession(3)"
+        >
+            <span>Sesi 3</span>
+            <small>10 Jukugo</small>
+        </button>
+
+    </section>
+
+
+    <!-- QUIZ AREA -->
+
+    <section
+        class="quiz-card"
+        id="quizArea"
+    >
+
+        <div class="quiz-top">
+
+            <span id="quizTitle">
+                Quiz 1
+            </span>
+
+            <span id="questionNumber">
+                1 / 11
+            </span>
+
+        </div>
+
+
+        <div class="progress-container">
+
+            <div id="progressBar"></div>
+
+        </div>
+
+
+        <div class="question-area">
+
+            <p
+                class="question-type"
+                id="questionType"
+            >
+                Kunyomi
+            </p>
+
+            <h2 id="questionText">
+                Memuat soal...
+            </h2>
+
+            <div
+                id="answerArea"
+                class="answer-area"
+            >
+            </div>
+
+        </div>
+
+
+        <button
+            id="nextButton"
+            class="next-button"
+            onclick="nextQuestion()"
+            disabled
+        >
+            次へ →
+        </button>
+
+    </section>
+
+
+    <!-- RESULT -->
+
+    <section
+        class="result-card"
+        id="resultArea"
+        style="display: none;"
+    >
+
+        <p class="result-label">
+            QUIZ RESULT
+        </p>
+
+        <h2 id="resultTitle">
+            すごい！
+        </h2>
+
+
+        <div class="score-circle">
+
+            <span id="scoreText">
+                0%
+            </span>
+
+        </div>
+
+
+        <p id="resultMessage">
+            よくできました！
+        </p>
+
+
+        <div class="result-detail">
+
+            <span id="correctText">
+                0 benar
+            </span>
+
+            <span id="wrongText">
+                0 salah
+            </span>
+
+        </div>
+
+
+        <div class="result-buttons">
+
+            <button
+                class="retry-button"
+                onclick="retryQuiz()"
+            >
+                もう一度
+            </button>
+
+
+            <button
+                id="nextSessionButton"
+                class="retry-button"
+                onclick="goToNextSession()"
+                style="display: none;"
+            >
+                次のセッション →
+            </button>
+
+
+            <a
+                href="maps.html"
+                class="map-button"
+            >
+                漢字マップへ
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <p>
+        漢字テスト — Kanji Learning Website
+    </p>
+
+    <p>
+        第4週 · 15 Kanji
+    </p>
+
+</footer>
+
+
+<script src="script4.js"></script>
+
+</body>
+</html>
