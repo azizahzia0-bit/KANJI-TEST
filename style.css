@@ -1,0 +1,844 @@
+```css
+/* =========================================
+   BASIC
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    background: #f7f4ec;
+    color: #302b28;
+    line-height: 1.7;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(247, 244, 236, 0.92);
+    border-bottom: 1px solid #e6dfd2;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #493c35;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu a {
+    font-size: 0.9rem;
+    color: #655a53;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: #53677a;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 90px 9% 80px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(109, 130, 148, 0.14),
+            transparent 35%
+        ),
+        #f7f4ec;
+}
+
+.hero-text {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-jp {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.1rem;
+    color: #61778b;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(4rem, 9vw, 7.5rem);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+
+    color: #332b27;
+}
+
+.hero-subtitle {
+    margin-top: 8px;
+
+    font-size: 0.95rem;
+    letter-spacing: 0.3em;
+
+    color: #85786e;
+}
+
+.hero-description {
+    margin-top: 28px;
+
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.25rem;
+
+    color: #4b423d;
+}
+
+.hero-description-id {
+    max-width: 520px;
+
+    margin-top: 6px;
+
+    font-size: 0.95rem;
+    color: #756b64;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 32px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 0 25px;
+
+    border-radius: 10px;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: #52697c;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #44596b;
+}
+
+.btn-secondary {
+    border: 1px solid #c9c0b5;
+    color: #554b45;
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.btn-secondary:hover {
+    border-color: #52697c;
+}
+
+
+/* =========================================
+   DECORATIVE KANJI
+========================================= */
+
+.hero-kanji {
+    width: 390px;
+    height: 390px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(82, 105, 124, 0.13),
+            rgba(82, 105, 124, 0.03) 65%,
+            transparent 66%
+        );
+}
+
+.kanji {
+    position: absolute;
+
+    font-family: "Noto Serif JP", serif;
+
+    color: #596f82;
+
+    user-select: none;
+}
+
+.kanji-1 {
+    font-size: 7rem;
+    transform: translate(-75px, -65px);
+}
+
+.kanji-2 {
+    font-size: 6rem;
+    transform: translate(80px, 40px);
+}
+
+.kanji-3 {
+    font-size: 4rem;
+    transform: translate(5px, 105px);
+
+    color: #9a897c;
+}
+
+
+/* =========================================
+   WELCOME CARD
+========================================= */
+
+.welcome-section {
+    padding: 30px 9% 80px;
+}
+
+.welcome-card {
+    max-width: 1050px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    padding: 26px 30px;
+
+    border: 1px solid #e3dbcf;
+    border-radius: 16px;
+
+    background: #fffdf8;
+
+    box-shadow: 0 8px 30px rgba(65, 52, 43, 0.05);
+}
+
+.welcome-icon {
+    width: 62px;
+    height: 62px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #e9eef1;
+
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.8rem;
+
+    color: #52697c;
+}
+
+.welcome-card h2 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.25rem;
+
+    color: #433a35;
+}
+
+.welcome-card p {
+    margin-top: 4px;
+
+    font-size: 0.9rem;
+    color: #746b64;
+}
+
+
+/* =========================================
+   MENU SECTION
+========================================= */
+
+.menu-section {
+    padding: 20px 9% 100px;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 42px;
+
+    text-align: center;
+}
+
+.section-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+
+    color: #718394;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+
+    font-family: "Noto Serif JP", serif;
+    font-size: 2.3rem;
+    font-weight: 500;
+
+    color: #3d342f;
+}
+
+.section-heading p {
+    margin-top: 5px;
+
+    color: #7b716a;
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   MENU GRID
+========================================= */
+
+.menu-grid {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+
+/* =========================================
+   MENU CARD
+========================================= */
+
+.menu-card {
+    min-height: 150px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 22px;
+
+    position: relative;
+
+    border: 1px solid #e3dbcf;
+    border-radius: 16px;
+
+    background: #fffdf8;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #b7c3cc;
+
+    box-shadow:
+        0 14px 35px rgba(60, 49, 42, 0.08);
+}
+
+.map-card {
+    grid-column: 1 / -1;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf8,
+            #f0f3f4
+        );
+}
+
+.card-icon {
+    width: 68px;
+    height: 68px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #edf0f1;
+
+    font-family: "Noto Serif JP", serif;
+    font-size: 2rem;
+
+    color: #566d80;
+}
+
+.map-card .card-icon {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.7rem;
+}
+
+.card-content {
+    padding-right: 30px;
+}
+
+.card-number {
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    color: #8b7c70;
+}
+
+.card-content h3 {
+    margin-top: 2px;
+
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    color: #3d342f;
+}
+
+.card-content p {
+    margin-top: 2px;
+
+    font-size: 0.82rem;
+    color: #81766e;
+}
+
+.arrow {
+    position: absolute;
+    right: 22px;
+
+    font-size: 1.3rem;
+
+    color: #8b7f76;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+.menu-card:hover .arrow {
+    transform: translateX(4px);
+    color: #52697c;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid #e3dbcf;
+
+    color: #82776f;
+
+    background: #f1ede4;
+}
+
+.footer p {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1rem;
+}
+
+.footer span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================
+   DARK MODE
+   Mengikuti pengaturan perangkat
+========================================= */
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: #1d1c1b;
+        color: #eee9e2;
+    }
+
+    .navbar {
+        background: rgba(29, 28, 27, 0.94);
+        border-bottom-color: #363331;
+    }
+
+    .logo {
+        color: #eee9e2;
+    }
+
+    .nav-menu a {
+        color: #bdb5ad;
+    }
+
+    .nav-menu a:hover {
+        color: #a9bfd0;
+    }
+
+    .hero {
+        background:
+            radial-gradient(
+                circle at 80% 30%,
+                rgba(100, 127, 150, 0.15),
+                transparent 35%
+            ),
+            #1d1c1b;
+    }
+
+    .welcome-jp {
+        color: #9db2c4;
+    }
+
+    .hero h1 {
+        color: #f2eee8;
+    }
+
+    .hero-subtitle {
+        color: #aaa098;
+    }
+
+    .hero-description {
+        color: #d3cbc3;
+    }
+
+    .hero-description-id {
+        color: #a9a19a;
+    }
+
+    .btn-secondary {
+        background: #272523;
+        border-color: #514b46;
+        color: #ddd6cf;
+    }
+
+    .btn-secondary:hover {
+        border-color: #91a9bc;
+    }
+
+    .welcome-card,
+    .menu-card {
+        background: #252321;
+        border-color: #3c3835;
+        box-shadow: none;
+    }
+
+    .welcome-card h2,
+    .card-content h3 {
+        color: #eee8e1;
+    }
+
+    .welcome-card p,
+    .card-content p,
+    .section-heading p {
+        color: #aaa19a;
+    }
+
+    .welcome-icon,
+    .card-icon {
+        background: #30383e;
+        color: #a9bfd0;
+    }
+
+    .map-card {
+        background:
+            linear-gradient(
+                135deg,
+                #252321,
+                #292e31
+            );
+    }
+
+    .section-label {
+        color: #9cb0c0;
+    }
+
+    .section-heading h2 {
+        color: #eee8e1;
+    }
+
+    .card-number {
+        color: #a89b8f;
+    }
+
+    .arrow {
+        color: #aaa099;
+    }
+
+    .menu-card:hover {
+        border-color: #667887;
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .footer {
+        background: #171615;
+        border-top-color: #363331;
+        color: #9d958e;
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .hero-kanji {
+        width: 280px;
+        height: 280px;
+    }
+
+    .kanji-1 {
+        font-size: 5.5rem;
+    }
+
+    .kanji-2 {
+        font-size: 4.8rem;
+    }
+
+    .kanji-3 {
+        font-size: 3.2rem;
+    }
+
+    .menu-section,
+    .welcome-section {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 64px;
+        padding: 0 5%;
+    }
+
+    .nav-menu {
+        gap: 14px;
+    }
+
+    .nav-menu a {
+        font-size: 0.75rem;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding:
+            65px 7% 70px;
+
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.3rem, 15vw, 5rem);
+    }
+
+    .hero-description {
+        font-size: 1.05rem;
+    }
+
+    .hero-description-id {
+        font-size: 0.85rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-kanji {
+        width: 230px;
+        height: 230px;
+
+        margin-top: 45px;
+    }
+
+    .kanji-1 {
+        font-size: 4.5rem;
+        transform: translate(-45px, -40px);
+    }
+
+    .kanji-2 {
+        font-size: 4rem;
+        transform: translate(45px, 35px);
+    }
+
+    .kanji-3 {
+        font-size: 2.7rem;
+        transform: translate(0, 70px);
+    }
+
+    .welcome-section {
+        padding:
+            10px 5% 65px;
+    }
+
+    .welcome-card {
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .welcome-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 1.5rem;
+    }
+
+    .menu-section {
+        padding:
+            10px 5% 70px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.9rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-card {
+        grid-column: auto;
+    }
+
+    .menu-card {
+        min-height: 125px;
+        padding: 18px;
+    }
+
+    .card-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.7rem;
+    }
+
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-content p {
+        font-size: 0.76rem;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL SCREEN
+========================================= */
+
+@media (max-width: 400px) {
+
+    .nav-menu a:first-child {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 50px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
